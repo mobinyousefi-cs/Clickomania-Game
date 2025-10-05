@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clickomania"
+version = "1.0.0"
+description = "Click-o-Mania (Memory Match) – a clean Tkinter implementation."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Mobin Yousefi", email = "mobinyousefi@example.com" }]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/mobinyousefi-cs/clickomania"
+
+[tool.black]
+line-length = 100
+target-version = ["py310"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = ["E", "F", "I", "UP", "B"]
+ignore = []
+fix = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
